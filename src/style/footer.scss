@@ -1,5 +1,8 @@
 .footer {
   @extend .container;
+  @media (max-width: 1140px) {
+    padding: 0 20px;
+  }
 
   &-top {
     display: flex;
@@ -8,10 +11,19 @@
     padding-bottom: 40px;
     border-bottom: 1px solid #DDD;
     margin-bottom: 40px;
+    @media (max-width: 640px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-bottom: none;
+    }
 
     &__form {
       display: flex;
       align-items: center;
+      @media (max-width: 640px){
+        margin-top: 24px;
+      }
       input {
         @extend .montserrat-regular;
         font-size: 12px;
@@ -21,6 +33,10 @@
         border: 1px solid #F28482;
         &::placeholder{
           color: #999;
+        }
+
+        @media (max-width: 640px){
+          width: 216px;
         }
       }
 
@@ -37,14 +53,23 @@
 
     &__col.first{
       margin-right: 83px;
+      @media (max-width: 640px) {
+        margin-right: 0;
+      }
     }
 
     &__col.second{
       margin-right: 53px;
+      @media (max-width: 640px) {
+        display: none;
+      }
     }
 
     &__col.third{
       margin-top: 32px;
+      @media (max-width: 640px) {
+        display: none;
+      }
     }
 
 
@@ -99,6 +124,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 640px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 31px 0 24px 0;
+    }
     &__left{
       color: #777;
       @extend .montserrat-medium;
@@ -107,6 +138,9 @@
         @extend .montserrat-bold;
         color: #777;
         font-size: 12px;
+      }
+      @media (max-width: 640px) {
+        margin-bottom: 12px;
       }
     }
     &__right, &__right a{
