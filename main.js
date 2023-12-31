@@ -9,11 +9,59 @@ const bestSlider = new Swiper('.best-swiper', {
     // configure Swiper to use modules
     modules: [Navigation],
     loop: true,
+    slidesPerView: 2,
+    slidesPerGroupSkip:2,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        1121: {
+            slidesPerView: 6,
+            spaceBetween: 20
+        },
+        964: {
+            slidesPerView: 5,
+            spaceBetween: 20
+        },
+        750: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+        500: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+    }
+});
+
+const bestSliderAdaptive = new Swiper('.best-swiper-adaptive', {
+    // configure Swiper to use modules
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 2,
+    slidesPerGroupSkip:2,
+    spaceBetween: 20,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 });
+
+const moreSliderAdaptive = new Swiper('.more-swiper-adaptive', {
+    // configure Swiper to use modules
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 2,
+    slidesPerGroupSkip:2,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 
 // init Swiper:
 const moreSlider = new Swiper('.swiper', {

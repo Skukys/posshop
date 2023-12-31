@@ -1,6 +1,9 @@
 .more{
   @extend .container;
   margin-bottom: 185px;
+  @media (max-width: 570px) {
+    display: none !important;
+  }
   &-top{
     display: flex;
     justify-content: space-between;
