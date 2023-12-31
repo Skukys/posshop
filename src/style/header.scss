@@ -1,0 +1,254 @@
+.header{
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //z-index: 5;
+
+  &.burger{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  position: relative;
+  &-content{
+    background: #fff;
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    max-width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    @media (max-width: 1140px) {
+      padding: 20px;
+    }
+  }
+
+  &-nav{
+    display: flex;
+    @media (max-width: 900px) {
+      display: none;
+    }
+    &__item{
+      @extend .montserrat-regular;
+      color: #444;
+      margin-right: 28px;
+      transition: .3s;
+
+      &:hover{
+        color: #F28482;
+      }
+    }
+
+    &__item:last-child{
+      margin-right: 0;
+      color: #F28482;
+
+      img{
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &-control{
+    display: flex;
+    align-items: center;
+
+    &__search{
+      width: 306px;
+      padding: 9px 13px;
+      border-radius: 5px;
+      border: 1px solid rgba(68, 68, 68, 0.10);
+      display: flex;
+      align-items: center;
+      background: #F7F7F7;
+      margin-right: 12px;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+
+      label{
+        width: 100%;
+      }
+
+      input{
+        width: 100%;
+        margin-left: 6px;
+        @extend .montserrat-medium;
+        &::placeholder{
+          color: rgba(68, 68, 68, 0.25);
+        }
+      }
+    }
+    &__phone{
+      @extend .center;
+      border-radius: 5px;
+      background: #F7F7F7;
+      padding: 7px;
+      margin-right: 12px;
+    }
+    &__basket{
+      @extend .center;
+      border-radius: 5px;
+      background: #F7F7F7;
+      padding: 7px;
+      position: relative;
+
+      &-count{
+        border-radius: 100px;
+        background: #F28482;
+        width: 14px;
+        height: 14px;
+        bottom: 5px;
+        right: 5px;
+        position: absolute;
+        color: #fff;
+        @extend .center;
+        @extend .montserrat-semi-bold;
+      }
+    }
+    &__burger{
+      display: none;
+      margin-left: 16px;
+      width: 16px;
+      cursor: pointer;
+      height: 12px;
+      position: relative;
+      @extend .center;
+      @media (max-width: 900px) {
+        display: block;
+      }
+
+      &:before, &:after{
+        width: 16px;
+        content: '';
+        background: rgba(96, 96, 96, 1);
+        height: 1.5px;
+        display: block;
+        position: absolute;
+      }
+
+      &:before{
+        top: 0;
+        left: 0;
+        transition: .3s;
+
+      }
+
+      &:after{
+        bottom: 0.5px;
+        left: 0;
+        transition: .3s;
+      }
+
+      span{
+        width: 16px;
+        background: rgba(96, 96, 96, 1);
+        height: 1.5px;
+        display: block;
+      }
+
+      &.active{
+        span{
+          display: none;
+        }
+
+        &:after{
+          transform: rotate(45deg);
+          top: 6px;
+          left: 0;
+          transition: .3s;
+        }
+        &:before{
+          transform: rotate(-45deg);
+          top: 6px;
+          left: 0;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
+
+.burger-menu{
+  position: fixed;
+  display: none;
+  background: #fff;
+  z-index: 2;
+  top: 80px;
+  padding: 24px 24px 0 24px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  &.active{
+    display: block;
+  }
+
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 34px;
+    &-item{
+      color: #444;
+      @extend .montserrat-regular;
+      font-size: 14px;
+      margin-bottom: 28px;
+      &:last-child{
+        margin-bottom: 0;
+        color: #F28482;
+        img{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.catalogue-item{
+  width: 307px;
+  padding: 10px 20px 10px 0;
+  &__top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    &-text{
+      @extend .montserrat-medium;
+      color: #444;
+      font-size: 12px;
+      line-height: 14px; /* 116.667% */
+      flex: 1 1 ;
+    }
+    &-icon{
+      margin-right: 6px;
+    }
+  }
+  &.active{
+    .catalogue-item__content{
+      display: block;
+    }
+    .catalogue-item__top-arrow{
+      transform: rotate(180deg);
+    }
+  }
+  &__content{
+    display: none;
+    &-item{
+      color: #444;
+      @extend .montserrat-medium;
+      padding: 10px 0;
+      font-size: 12px;
+      line-height: 22px; /* 183.333% */
+    }
+  }
+}

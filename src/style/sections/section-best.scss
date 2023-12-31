@@ -1,0 +1,43 @@
+.best{
+  @extend .container;
+  margin-bottom: 80px;
+  &-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__control{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-content{
+
+    &__item{
+
+      &-top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .new-item{
+          &__info{
+            height: 50px;
+          }
+        }
+      }
+
+      &-bottom{
+        display: flex;
+        justify-content: space-between;
+        .new-item{
+          &__info{
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

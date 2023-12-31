@@ -1,0 +1,130 @@
+//BASE STYLES
+@import "fonts";
+@import "reset";
+
+
+@import "header";
+@import "sections/section-main";
+@import "sections/section-special";
+@import "sections/section-new";
+@import "sections/section-discount";
+@import "sections/section-best";
+@import "sections/section-banner";
+@import "sections/section-more";
+@import "sections/section-about";
+@import "sections/section-why";
+@import "sections/section-delivery";
+@import "footer";
+
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.content{
+  overflow-x: hidden;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+  @extend .center;
+  right: 0;
+  bottom: 0;
+
+  &.active{
+    display: flex;
+
+    .modal-content{
+      top: auto;
+      transition: .3s;
+      animation: modal-animate 0.3s ease-in;
+    }
+  }
+
+  @keyframes modal-animate {
+    from{
+      top: -500px;
+    }
+    to{
+      top: 0;
+    }
+  }
+
+  &-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    right: 0;
+    background: rgba(0, 0, 0, 0.64);
+  }
+
+  &-content{
+    border: 1px solid #DDD;
+    top: -1000px;
+    background: #FFF;
+    width: 327px;
+    height: 190px;
+    position: relative;
+    z-index: 5;
+    padding: 24px 34px 17px 15px;
+    &__exit{
+      position: absolute;
+      cursor: pointer;
+      top: 12px;
+      right: 12px;
+    }
+
+    &__info{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 14px;
+
+      &-left, &-right{
+        &__item{
+          color: #444;
+          @extend .montserrat-regular;
+          font-size: 14px;
+          margin-bottom: 10px;
+
+          span{
+            color: #444;
+            @extend .montserrat-medium;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &__socials{
+      display: flex;
+      &-item{
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background: #F7F7F7;
+        @extend .center;
+        margin-right: 16px;
+        cursor: pointer;
+      }
+    }
+
+    &__call{
+      color: #F28482;
+      @extend .montserrat-medium;
+      margin-top: 24px;
+      font-size: 14px;
+      text-decoration-line: underline !important;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+}

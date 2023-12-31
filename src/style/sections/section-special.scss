@@ -1,0 +1,76 @@
+.special{
+  @extend .container;
+  margin-top: 42px;
+
+  &-title{
+    margin-bottom: 21px;
+  }
+
+  &-content{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .special-item{
+    display: flex;
+    align-items: center;
+    width: 360px;
+    justify-content: space-between;
+    height: 190px;
+    border: 1px solid #DDD;
+
+    &__photo{
+      margin-left: 4px;
+      width: 140px;
+    }
+
+    &__info{
+      height: 100%;
+      padding: 20px 23px 18px 30px;
+      display: flex;
+      flex-direction: column;
+
+      &-discount{
+        margin-bottom: 10px;
+        width: 41px;
+        height: 20px;
+        background: #F28482;
+        @extend .center;
+        @extend .montserrat-bold;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      &-title{
+        @extend .montserrat-semi-bold;
+        color: #444;
+        width: 142px;
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
+
+      &-subtitle{
+        @extend .montserrat-regular;
+        color: #777;
+        font-size: 12px;
+        width: 170px;
+        height: auto;
+      }
+
+      &-button{
+        flex: 1 1;
+        display: flex;
+        align-items: flex-end;
+
+        a{
+          @extend .montserrat-medium;
+          color: #F28482;
+          font-size: 12px;
+          text-decoration-line: underline;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

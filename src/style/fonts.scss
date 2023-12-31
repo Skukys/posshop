@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('src/fonts/Comfortaa-Light.woff2') format('woff2'), url('src/fonts/Comfortaa-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('src/fonts/Comfortaa-Regular.woff2') format('woff2'), url('src/fonts/Comfortaa-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('src/fonts/Comfortaa-Bold.woff2') format('woff2'), url('src/fonts/Comfortaa-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-regular{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.montserrat-medium{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.montserrat-semi-bold{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.comfortaa-light{
+  font-family: 'Comfortaa', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.comfortaa-regular{
+  font-family: 'Comfortaa', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.comfortaa-bold{
+  font-family: 'Comfortaa', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.montserrat-light{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.montserrat-bold{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

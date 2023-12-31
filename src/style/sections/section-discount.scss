@@ -1,0 +1,79 @@
+.discount{
+  @extend .container;
+  margin-bottom: 73px;
+
+  &-content{
+    position: relative;
+    height: 222px;
+    padding: 30px 32px;
+    width: 100%;
+    
+    &__bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: #F4F4F4;
+
+      &-main{
+        position: absolute;
+        top: 0.5px;
+        right: 0;
+      }
+
+      &-basket{
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        img{
+          height: 100%;
+        }
+      }
+    }
+    &__info{
+      position: relative;
+      z-index: 1;
+
+      &-title{
+        @extend .comfortaa-light;
+        color: #212121;
+        font-size: 35px;
+        width: 480px;
+        position: relative;
+
+        &__icon{
+          color: #FFF;
+          @extend .montserrat-semi-bold;
+          @extend .center;
+          text-transform: uppercase;
+          position: absolute;
+          right: -69.488px;
+          top: -20px;
+          background: url("src/img/icons/discount-icon.svg") no-repeat 50% 50%;
+          width: 69.488px;
+          height: 69.488px;
+          transform: rotate(27.726deg);
+          font-size: 13.484px;
+          line-height: 130%; /* 17.53px */
+        }
+      }
+
+      &-subtitle{
+        @extend .comfortaa-regular;
+        font-size: 22px;
+        line-height: 130%; /* 28.6px */
+        color: rgba(68, 68, 68, 0.60);
+        margin-top: 12px;
+        width: 510px;
+      }
+
+      &-button{
+        width: 146.238px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

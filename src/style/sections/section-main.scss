@@ -1,0 +1,162 @@
+.main{
+  @extend .container;
+  display: flex;
+
+  @media(max-width: 1140px){
+    padding: 0 20px;
+    .main-control{
+      min-width: 225px;
+    }
+  }
+
+  &-control{
+    width: 265px;
+    height: 568px;
+    margin-right: 20px;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+
+    &__item{
+      display: flex;
+      align-items: center;
+      transition: .3s;
+      height: 34px;
+      padding: 10px 20px 10px 0;
+      width: 100%;
+
+      &-icon{
+        width: 14px;
+        height: 14px;
+        @extend .center;
+        margin-right: 6px;
+      }
+
+      span{
+        @extend .montserrat-medium;
+        font-size: 12px;
+        color: #444;
+      }
+
+      &-arrow{
+        margin-left: auto;
+        width: 4px;
+        height: 8px;
+      }
+    }
+  }
+
+  &-info{
+    flex: 1 1;
+    height: 568px;
+    position: relative;
+    display: flex;
+    padding: 40px 29px 40px 40px;
+
+    @media(max-width: 870px){
+      .main-info__right{
+        width: auto;
+        &-img{
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media(max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .main-info__right{
+        &-img{
+          height: 302px;
+        }
+      }
+    }
+
+    &__bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__left{
+      position: relative;
+      width: 329px;
+      margin-right: 17px;
+      &-top{
+        @extend .montserrat-regular;
+        color: #777;
+        font-size: 12px;
+        line-height: 140%;
+        margin-bottom: 20px;
+      }
+
+      &-title{
+        @extend .comfortaa-light;
+        color: #444;
+        font-size: 35px;
+        line-height: 140%;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      &-text{
+        @extend .montserrat-light;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      &-button{
+        @extend .montserrat-medium;
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+        background: #F28482;
+        width: 250px;
+        height: 42px;
+        text-transform: uppercase;
+
+        &:hover{
+          background: #ffa5a4;
+          transition: .3s;
+        }
+      }
+    }
+
+    &__right{
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      width: 420px;
+
+
+      @media(max-width: 870px){
+          width: auto;
+        img{
+          width: auto;
+          height: auto;
+        }
+      }
+
+      img{
+        width: 420px;
+        object-fit: cover;
+        height: 392px;
+
+
+      }
+    }
+  }
+
+}
