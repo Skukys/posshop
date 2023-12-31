@@ -9,6 +9,11 @@
     }
   }
 
+  @media(max-width: 800px){
+    padding: 0;
+  }
+
+
   &-control{
     width: 265px;
     height: 568px;
@@ -68,8 +73,11 @@
 
     @media(max-width: 800px) {
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      padding: 40px 24px 45px 24px;
+      background: #ECECEC;
+      height: 808px;
 
       .main-info__right{
         &-img{
@@ -84,12 +92,18 @@
       left: 0;
       bottom: 0;
       right: 0;
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     &__left{
       position: relative;
       width: 329px;
       margin-right: 17px;
+      @media (max-width: 500px) {
+        width: 327px;
+      }
       &-top{
         @extend .montserrat-regular;
         color: #777;
@@ -105,6 +119,9 @@
         line-height: 140%;
         margin-bottom: 20px;
         text-transform: uppercase;
+        @media (max-width: 800px) {
+          font-size: 32px;
+        }
       }
 
       &-text{
@@ -126,7 +143,9 @@
         width: 250px;
         height: 42px;
         text-transform: uppercase;
-
+        @media (max-width: 500px) {
+          width: 100%;
+        }
         &:hover{
           background: #ffa5a4;
           transition: .3s;
@@ -141,19 +160,24 @@
       width: 420px;
 
 
-      @media(max-width: 870px){
+      &-img{
+        @media(max-width: 870px){
           width: auto;
-        img{
-          width: auto;
-          height: auto;
+          img{
+            width: auto;
+            height: auto;
+          }
         }
-      }
 
-      img{
-        width: 420px;
-        object-fit: cover;
-        height: 392px;
-
+        @media (max-width: 800px) {
+          width: 323.571px;
+          height: 302px;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
 
       }
     }

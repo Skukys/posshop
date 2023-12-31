@@ -1,21 +1,41 @@
 .special{
   @extend .container;
   margin-top: 42px;
+  
+  @media (max-width: 1140px) {
+    padding: 0 20px;
+  }
 
   &-title{
     margin-bottom: 21px;
+    @media (max-width: 500px) {
+      margin-bottom: 32px;
+    }
   }
 
   &-content{
     display: flex;
     justify-content: space-between;
-
+    @media (max-width: 1140px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   .special-item{
     display: flex;
     align-items: center;
     width: 360px;
+    @media (max-width: 1140px) {
+      width: 30%;
+      min-width: 327px;
+      margin: 10px;
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+      margin: 6px 0;
+    }
     justify-content: space-between;
     height: 190px;
     border: 1px solid #DDD;
@@ -23,6 +43,10 @@
     &__photo{
       margin-left: 4px;
       width: 140px;
+
+      @media (max-width: 1140px) {
+        min-width: 110px;
+      }
     }
 
     &__info{
@@ -30,7 +54,9 @@
       padding: 20px 23px 18px 30px;
       display: flex;
       flex-direction: column;
-
+      @media (max-width: 1140px) {
+        padding: 20px 13px 18px 22px;
+      }
       &-discount{
         margin-bottom: 10px;
         width: 41px;

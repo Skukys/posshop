@@ -1,34 +1,59 @@
-.new{
+.new {
   @extend .container;
   margin-top: 60px;
   margin-bottom: 74px;
 
-  &-title{
+  @media (max-width: 1140px) {
+    padding: 0 20px;
+  }
+
+  &-title {
     margin-bottom: 60px;
   }
 
-  &-content{
+  &-content {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1140px) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-    &__item{
+    &__item {
       width: 170px;
       height: 243px;
+
+      @media (max-width: 1140px) {
+        margin-bottom: 20px;
+      }
+
+      &__item:last-child {
+        @media (max-width: 1140px) {
+          //margin-right: ;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
 
-.new-item{
+.new-item {
   cursor: pointer;
   width: 170px;
   height: 243px;
-  &:hover{
-    .new-item__photo{
+  @media (max-width: 500px) {
+    width: 153px;
+    height: 220px;
+  }
+
+  &:hover {
+    .new-item__photo {
       transition: .3s;
       border: 1px solid #F28482;
     }
   }
-  &__photo{
+
+  &__photo {
     @extend .center;
     position: relative;
     border: 1px solid #EDEDED;
@@ -36,30 +61,41 @@
     height: 170px;
     width: 170px;
 
-    img{
+    @media (max-width: 500px) {
+      height: 153px;
+      width: 153px;
+    }
+
+    img {
       object-fit: cover;
     }
 
-    &-basket{
+    &-basket {
       position: absolute;
       bottom: 4px;
       left: 4px;
       cursor: pointer;
     }
   }
-  &__info{
+
+  &__info {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 63px;
 
-    &-title{
+    @media (max-width: 500px) {
+      height: 57px;
+    }
+
+    &-title {
       color: #444;
       @extend .montserrat-medium;
       font-size: 12px;
     }
-    &-subtitle{
+
+    &-subtitle {
       color: #777;
       @extend .montserrat-regular;
       font-size: 12px;

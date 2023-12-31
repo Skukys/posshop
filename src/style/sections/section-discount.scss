@@ -2,11 +2,24 @@
   @extend .container;
   margin-bottom: 73px;
 
+  @media (max-width: 1140px) {
+    padding: 0 20px;
+  }
+
   &-content{
     position: relative;
     height: 222px;
     padding: 30px 32px;
     width: 100%;
+    @media (max-width: 950px) {
+      height: 571px;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 500px) {
+      padding: 33px 16px 33px 16px;
+    }
     
     &__bg{
       position: absolute;
@@ -16,10 +29,20 @@
       right: 0;
       background: #F4F4F4;
 
+      @media (max-width: 950px) {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+
       &-main{
         position: absolute;
         top: 0.5px;
         right: 0;
+        @media (max-width: 950px) {
+          display: none;
+        }
       }
 
       &-basket{
@@ -27,9 +50,22 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        @media (max-width: 950px) {
+          display: none;
+        }
 
         img{
           height: 100%;
+        }
+      }
+
+      &-basket{
+        &-adaptive{
+          display: none;
+          @media (max-width: 950px) {
+            display: block;
+
+          }
         }
       }
     }
@@ -43,6 +79,11 @@
         font-size: 35px;
         width: 480px;
         position: relative;
+
+        @media (max-width: 650px) {
+          width: 295px;
+          font-size: 32px;
+        }
 
         &__icon{
           color: #FFF;
@@ -58,6 +99,11 @@
           transform: rotate(27.726deg);
           font-size: 13.484px;
           line-height: 130%; /* 17.53px */
+          @media (max-width: 650px) {
+            top: 22px;
+            right: 85px;
+          }
+
         }
       }
 
@@ -68,11 +114,20 @@
         color: rgba(68, 68, 68, 0.60);
         margin-top: 12px;
         width: 510px;
+        @media (max-width: 650px) {
+          margin-top: 32px;
+          width: auto;
+        }
       }
 
       &-button{
         width: 146.238px;
         margin-top: 20px;
+
+        @media (max-width: 500px) {
+          width: 100%;
+          margin-top: 47px;
+        }
       }
     }
   }
