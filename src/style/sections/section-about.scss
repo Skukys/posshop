@@ -1,6 +1,5 @@
 .about{
   @extend .container;
-  padding: 35.12px 0 0 54px;
   position: relative;
   margin-bottom: 120px;
   display: flex;
@@ -18,8 +17,8 @@
   
   &-bg{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -35.12px;
+    left: -54px;
     @media (max-width: 950px) {
       display: none;
     }

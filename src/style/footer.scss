@@ -21,28 +21,29 @@
     &__form {
       display: flex;
       align-items: center;
+      width: 360px;
       @media (max-width: 640px){
         margin-top: 24px;
+        width: 216px;
+
       }
       input {
         @extend .montserrat-regular;
         font-size: 12px;
-        width: 360px;
         height: 40px;
+        width: 100%;
         padding: 12px 14px;
         border: 1px solid #F28482;
         &::placeholder{
           color: #999;
         }
 
-        @media (max-width: 640px){
-          width: 216px;
-        }
       }
 
       button {
         height: 40px;
         width: 113px;
+        min-width: 113px;
         text-transform: none;
       }
     }
